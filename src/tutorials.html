@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="icon" href="./assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Dorascribe uses AI-powered speech-to-text transcription tailored for healthcare to convert clinical consultations into EMR text affordably and efficiently."
+    />
+    <meta name="image" content="https://i.ibb.co/4K98PfK/Page-Image.jpg" />
+
+    <meta property="og:title" content="Dorascribe - Tutorials Page" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta
+      property="og:description"
+      content="Dorascribe uses AI-powered speech-to-text transcription tailored for healthcare to convert clinical consultations into EMR text affordably and efficiently."
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/4K98PfK/Page-Image.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Tutorials</title>
+  </head>
+  <body>
+    <div
+      id="overlay"
+      class="w-full bg-white backdrop-blur-xl h-96 p-6 flex justify-center items-center transform -translate-y-[500px] shadow transition-all duration-700 fixed top-[78px] z-[99]"
+    >
+      <div class="w-full flex flex-col justify-center items-center space-y-5">
+        <a href="./index.html" class="text-base font-semibold text-[#272D37]"
+          >Home</a
+        >
+        <a href="./pricing.html" class="text-base font-semibold text-[#272D37]"
+          >Pricing</a
+        >
+        <a
+          href="https://blog.dorascribe.ai"
+          class="text-base font-semibold text-[#272D37]"
+          >Blog</a
+        >
+        <a
+          href="./tutorials.html"
+          class="text-base font-semibold text-[#272D37]"
+          >Dorascribe Tutorials</a
+        >
+        <a href="./faqs.html" class="text-base font-semibold text-[#272D37]"
+          >FAQs</a
+        >
+        <a
+          href="https://calendly.com/help-dorascribe"
+          target="_blank"
+          class="text-base font-semibold text-[#272D37]"
+          >Book Demo</a
+        >
+
+        <div class="flex items-center space-x-3 mt-4">
+          <button
+            id="dashboard-btn"
+            class="px-5 py-3 font-semibold shadow bg-[#00AAAA] text-white rounded-[40px] hidden"
+          >
+            Go to Dashboard
+          </button>
+          <a
+            href="/login"
+            id="login-btn"
+            class="px-4 py-2 text-base font-semibold text-[#121212] hover:bg-gray-200 rounded-[40px]"
+            >Log in</a
+          >
+          <a
+            href="/signUp"
+            id="signup-btn"
+            class="px-5 py-3 font-semibold shadow bg-[#00AAAA] text-white rounded-[40px]"
+            >Sign Up Now</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav
+      class="py-7 px-4 md:px-14 flex justify-between items-center fixed w-full top-0 bg-white left-0 z-[999]"
+    >
+      <div class="flex items-center space-x-16">
+        <img src="./assets/Logo.svg" alt="Dorascribe" class="h-8" />
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="./index.html" class="text-base font-semibold text-[#272D37]"
+            >Home</a
+          >
+          <a
+            href="./pricing.html"
+            class="text-base font-semibold text-[#272D37]"
+            >Pricing</a
+          >
+          <a
+            href="https://blog.dorascribe.ai"
+            class="text-base font-semibold text-[#272D37]"
+            >Blog</a
+          >
+          <a
+            href="./tutorials.html"
+            class="text-base font-semibold text-[#272D37]"
+            >Dorascribe Tutorials</a
+          >
+          <a href="./faqs.html" class="text-base font-semibold text-[#272D37]"
+            >FAQs</a
+          >
+        </div>
+      </div>
+      <div class="hidden md:flex items-center space-x-3">
+        <button
+          id="dashboard-btn-md"
+          class="px-5 py-3 font-semibold shadow bg-[#00AAAA] text-white rounded-[40px] hidden"
+        >
+          Go to Dashboard
+        </button>
+        <a
+          href="/login"
+          id="login-btn-md"
+          class="px-4 py-2 text-base font-semibold text-[#121212] hover:bg-gray-200 rounded-[40px]"
+          >Log in</a
+        >
+        <!-- <a
+          href="https://calendly.com/help-dorascribe"
+          target="_blank"
+          class="px-5 py-3 font-semibold shadow bg-[#00AAAA] text-white rounded-[40px]"
+          >Book Demo</a
+        > -->
+        <a
+          href="/signUp"
+          id="signup-btn-md"
+          class="px-5 py-3 font-semibold shadow bg-[#00AAAA] text-white rounded-[40px]"
+          >Sign Up Now</a
+        >
+
+        <div
+          onclick="toggleOverlay()"
+          class="menu-icon hidden md:block lg:hidden cursor-pointer"
+        >
+          <input class="menu-icon__cheeckbox" type="checkbox" />
+          <div>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div onclick="toggleOverlay()" class="menu-icon md:hidden">
+        <input class="menu-icon__cheeckbox" type="checkbox" />
+        <div>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- body -->
+
+    <!-- hero -->
+    <div
+      class="px-4 md:px-14 w-full py-16 bg-[#7EC4C4] mt-28 flex flex-col items-center justify-center"
+    >
+      <h1
+        class="text-white text-center font-semibold w-full font-BricolageGrotesque text-[42px] leading-[1] xl:text-5xl"
+      >
+        Dorascribe Tutorials
+      </h1>
+      <h3 class="ont-Inter font-normal text-xl text-white mt-5 text-center">
+        Master AI-powered documentation with Dorascribe. Explore step-by-step
+        tutorials designed to enhance your workflow.
+      </h3>
+      <a
+        href=""
+        target="_blank"
+        class="py-4 px-5 bg-[#00AAAA] rounded-[64px] mt-8 text-white font-BricolageGrotesque font-semibold text-lg"
+        >Try for Free</a
+      >
+    </div>
+
+    <!-- how tos -->
+
+    <div
+      class="px-4 md:px-14 w-full py-8 md:py-16 flex justify-center items-center flex-col"
+    >
+      <p
+        class="text-center font-BricolageGrotesque font-semibold text-2xl md:text-[40px] text-black"
+      >
+        How-To Guides
+      </p>
+      <p
+        class="text-center font-Inter text-base md:text-lg font-normal mt-3 text-[282D2D] lg:w-[800px]"
+      >
+        Improve Efficiency with Our How-To's.
+      </p>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div class="w-full h-[300px] bg-[#f1f1f1] rounded-[20px]">
+          <iframe
+            class="w-full h-full rounded-[20px]"
+            src="https://www.youtube.com/embed/jRnNgcmDfHY"
+          ></iframe>
+        </div>
+        <div class="w-full h-[300px] bg-[#f1f1f1] rounded-[20px]">
+          <iframe
+            class="w-full h-full rounded-[20px]"
+            src="https://www.youtube.com/embed/DoDCFIsMTNg"
+          ></iframe>
+        </div>
+        <div class="w-full h-[300px] bg-[#f1f1f1] rounded-[20px]">
+          <iframe
+            class="w-full h-full rounded-[20px]"
+            src="https://www.youtube.com/embed/rx6SbZo5Zzk"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faqs -->
+    <div
+      class="px-4 md:px-14 w-full py-16 flex flex-col justify-center items-center"
+    >
+      <h2
+        class="text-center font-BricolageGrotesque font-semibold text-[40px] text-black"
+      >
+        Our FAQ’s
+      </h2>
+      <p class="font-normal text-lg font-Inter text-[#000000CC]">
+        Our Frequently asked questions?
+      </p>
+      <div id="faqContainer" class="mt-12"></div>
+    </div>
+
+    <!-- Banner -->
+    <div class="py-8 md:py-16 px-6 md:px-14 w-full">
+      <div
+        class="bg-[#7EC4C4] flex flex-col items-center justify-center py-24 rounded-[32px]"
+      >
+        <h2
+          class="font-semibold font-BricolageGrotesque text-xl md:text-[32px] text-center text-white"
+        >
+          Do less Admin, provide more care
+        </h2>
+        <p
+          class="mt-2 text-sm md:text-base font-normal text-center text-white font-Inter"
+        >
+          Dorascribe AI speech-to-text convert clinical consultations into notes
+          fast and easy.
+        </p>
+        <a href="/signUp">
+          <button
+            class="mt-8 bg-[#214058] rounded-[50px] py-3 px-[18px] font-BricolageGrotesque text-sm md:text-base font-semibold text-[#fff] shadow shadow-[#1018280A]"
+          >
+            Get Started Now
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-[#364759] py-8 md:py-16 px-4 md:px-14">
+      <div
+        class="w-full flex md:flex-row flex-col space-y-6 md:space-y-0 items-center justify-between border-b border-[#EAEBF0B2] pb-8"
+      >
+        <img src="./assets/whitelogo.svg" alt="Logo" />
+
+        <div class="flex items-center space-x-12">
+          <a
+            href="./tutorials.html"
+            class="font-Inter font-semibold text-sm md:text-base text-white"
+            >Tutorials</a
+          >
+          <a class="font-Inter font-semibold text-sm md:text-base text-white"
+            >Blogs</a
+          >
+          <a
+            href="./pricing.html"
+            class="font-Inter font-semibold text-sm md:text-base text-white"
+            >Pricing</a
+          >
+          <a
+            href="https://blog.dorascribe.ai"
+            class="font-Inter font-semibold text-sm md:text-base text-white"
+            >Resources</a
+          >
+        </div>
+
+        <span class="flex items-center space-x-6">
+          <a href="https://x.com/DorascribeInc" target="_blank">
+            <img src="./assets/twi.svg" class="w-6 md:w-auto" alt="Twitter" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/dorascribe-inc"
+            target="_blank"
+          >
+            <img
+              src="./assets/linkedin.png"
+              class="w-6 md:w-auto"
+              alt="LinkedIn"
+            />
+          </a>
+        </span>
+      </div>
+
+      <div
+        class="pt-8 flex flex-col md:flex-row space-y-6 md:space-y-0 justify-between w-full items-center md:items-end"
+      >
+        <div class="space-y-4">
+          <p
+            class="text-[#FFFFFFB2] font-Inter font-normal text-sm md:text-base"
+          >
+            Contact:
+            <a
+              href="mailto:help@dorascribe.com"
+              class="underline underline-offset-4 font-semibold"
+            >
+              help@dorascribe.com
+            </a>
+          </p>
+          <p
+            class="text-[#FFFFFFB2] font-Inter font-normal text-sm md:text-base"
+          >
+            © 2024 Dorascribe. All Rights Reserved.
+          </p>
+        </div>
+
+        <span class="flex items-center space-x-4 md:space-x-12">
+          <a
+            href="/privacy-policy"
+            class="font-Inter font-semibold text-sm md:text-base text-[#FFFFFFB2]"
+            >Privacy Policy</a
+          >
+          <a
+            href="/terms-and-conditions"
+            class="font-Inter font-semibold text-sm md:text-base text-[#FFFFFFB2]"
+            >Terms & Conditions</a
+          >
+        </span>
+      </div>
+    </div>
+  </body>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/faq.js"></script>
+</html>
